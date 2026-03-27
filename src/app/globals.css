@@ -24,6 +24,7 @@
     --input: 0 0% 89.8%;
     --ring: 331 68% 52%;
     --radius: 0.75rem;
+    --line: 0 0% 89.8%;
   }
   .dark {
     --background: 0 0% 2%;
@@ -45,6 +46,7 @@
     --border: 0 0% 12%;
     --input: 0 0% 12%;
     --ring: 331 68% 52%;
+    --line: 0 0% 15%;
   }
 }
 
@@ -58,10 +60,70 @@
   }
 }
 
+.site-shell {
+  @apply flex flex-col min-h-screen;
+}
+
+.topbar {
+  @apply sticky top-0 z-50 py-4 bg-background/80 backdrop-blur-md border-b border-border/50;
+}
+
+.topbar-inner {
+  @apply flex items-center justify-between;
+}
+
+.nav {
+  @apply flex items-center gap-8;
+}
+
+.nav-link {
+  @apply text-sm font-medium text-muted-foreground hover:text-primary transition-colors;
+}
+
 .glow-magenta {
   box-shadow: 0 0 20px -5px hsl(var(--primary));
 }
 
 .transition-custom {
   transition: all 160ms ease-in-out;
+}
+
+.brand-logo-wrap--full {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.brand-logo-wrap--mark,
+.brand-logo-wrap--wordmark {
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-brand-lockup--premium {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-brand-note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--line));
+  background: rgba(255, 255, 255, 0.04);
+  letter-spacing: 0.02em;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
