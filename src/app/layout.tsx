@@ -22,6 +22,12 @@ export const metadata: Metadata = {
     'SaaS',
     'ViraLink',
   ],
+  manifest: '/manifest.webmanifest',
+  icons: {
+    icon: '/icon',
+    shortcut: '/icon',
+    apple: '/icon',
+  },
   openGraph: {
     title: 'Bit4code',
     description:
@@ -30,6 +36,21 @@ export const metadata: Metadata = {
     siteName: 'Bit4code',
     locale: 'pt_BR',
     type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Bit4code',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bit4code',
+    description:
+      'Tecnologia sob medida para acelerar negócios com software, automação, IA, TI e segurança digital.',
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
@@ -50,11 +71,6 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" className="dark">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-      </head>
       <body className="font-body antialiased bg-background text-foreground">
         <div className="site-shell">
           <header className="topbar">

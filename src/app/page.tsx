@@ -31,7 +31,7 @@ const serviceCards = [
 
 const metrics = [
   { value: 'Alta', label: 'performance e foco em carregamento rápido' },
-  { value: 'Sênior', label: 'nível de estrutura e organização do projeto' },
+  { value: 'Senior', label: 'nível de estrutura e organização do projeto' },
   { value: 'Moderna', label: 'base tecnológica com Next.js e TypeScript' },
   { value: 'Pronto', label: 'para publicação em ambiente Firebase' },
 ];
@@ -39,57 +39,75 @@ const metrics = [
 export default function HomePage() {
   return (
     <>
-      <section className="hero py-20 lg:py-32 overflow-hidden bg-background">
-        <div className="container mx-auto px-4 hero-grid grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <div className="eyebrow inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest border border-primary/20">
-              BIT4CODE • engenharia digital com identidade própria
-            </div>
-            <h1 className="text-4xl lg:text-6xl font-black leading-tight">
-              Tecnologia com presença forte, execução sólida e visual profissional.
-            </h1>
+      <section className="hero hero--premium bg-background overflow-hidden py-20 lg:py-32">
+        <div className="container mx-auto px-4">
+          <div className="hero-premium-shell grid grid-cols-1 lg:grid-cols-[1.02fr_0.98fr] gap-12 items-center">
+            <div className="hero-premium-content space-y-8">
+              <div className="eyebrow inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest border border-primary/20">
+                BIT4CODE • presença digital com padrão profissional
+              </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-              A Bit4code desenvolve soluções digitais com foco em programação,
-              automação, inteligência artificial, TI, CyberSecurity, SaaS e produtos
-              próprios como o ViraLink. Tudo com base técnica moderna, performance e
-              apresentação institucional de alto nível.
-            </p>
+              <h1 className="text-4xl lg:text-6xl font-black leading-tight">
+                Engenharia digital para marcas, operações e produtos que exigem
+                presença forte.
+              </h1>
 
-            <div className="hero-actions flex flex-wrap gap-4">
-              <Link href="/contact" className="button bg-primary text-primary-foreground px-8 py-4 rounded-lg font-bold hover:opacity-90 transition-all shadow-lg glow-magenta">
-                Falar com a Bit4code
-              </Link>
-              <Link href="/services" className="button-secondary border border-border px-8 py-4 rounded-lg font-bold hover:bg-muted transition-all">
-                Ver serviços
-              </Link>
-            </div>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+                A Bit4code desenvolve soluções com foco em programação, automação,
+                inteligência artificial, TI, CyberSecurity, SaaS e produtos próprios
+                como o ViraLink. Unimos identidade visual, execução técnica e
+                performance para entregar presença digital séria e moderna.
+              </p>
 
-            <div className="badge-row flex flex-wrap gap-2" aria-label="Áreas de atuação">
-              {['Programação', 'Automação', 'IA', 'TI', 'CyberSecurity', 'SaaS', 'ViraLink'].map(b => (
-                <span key={b} className="badge bg-muted px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider opacity-70">
-                  {b}
-                </span>
-              ))}
-            </div>
-          </div>
+              <div className="hero-actions flex flex-wrap gap-4">
+                <Link href="/contact" className="button bg-primary text-primary-foreground px-8 py-4 rounded-lg font-bold hover:opacity-90 transition-all shadow-lg glow-magenta">
+                  Falar com a Bit4code
+                </Link>
+                <Link href="/services" className="button-secondary border border-border px-8 py-4 rounded-lg font-bold hover:bg-muted transition-all">
+                  Conhecer serviços
+                </Link>
+              </div>
 
-          <div className="hero-visual-card relative bg-card/50 backdrop-blur-xl border border-border/50 p-8 lg:p-12 rounded-[2rem] shadow-2xl overflow-hidden">
-            <div className="hero-brand-lockup hero-brand-lockup--premium relative z-10 flex flex-col gap-4 mb-8">
-              <BrandLogo size="lg" variant="full" />
-              <div className="hero-brand-note text-[10px] text-muted-foreground uppercase tracking-widest bg-white/5 border border-white/10 px-4 py-2 rounded-full w-fit">
-                identidade visual própria criada em SVG para uso institucional
+              <div className="badge-row flex flex-wrap gap-2" aria-label="Áreas de atuação">
+                {['Programação', 'Automação', 'IA', 'TI', 'CyberSecurity', 'SaaS', 'ViraLink'].map(b => (
+                  <span key={b} className="badge bg-muted px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider opacity-70">
+                    {b}
+                  </span>
+                ))}
               </div>
             </div>
-            <HeroArt />
+
+            <div className="hero-premium-side relative">
+              <div className="hero-visual-card hero-visual-card--premium relative bg-card/50 backdrop-blur-xl border border-border/50 p-8 lg:p-12 rounded-[2rem] shadow-2xl overflow-hidden min-h-[400px] lg:min-h-[560px]">
+                <div className="hero-brand-lockup hero-brand-lockup--premium relative z-10 flex flex-col gap-4 mb-8">
+                  <BrandLogo size="lg" variant="full" />
+                  <div className="hero-brand-note text-[10px] text-muted-foreground uppercase tracking-widest bg-white/5 border border-white/10 px-4 py-2 rounded-full w-fit">
+                    identidade proprietária criada em SVG para uso institucional e digital
+                  </div>
+                </div>
+
+                <div className="hero-floating-stats flex gap-4 absolute bottom-8 right-8 z-20">
+                  <div className="hero-floating-card min-w-[140px] p-4 rounded-2xl border border-white/10 bg-black/60 backdrop-blur-md shadow-2xl">
+                    <span className="hero-floating-label block text-[10px] text-muted-foreground uppercase tracking-widest mb-1">Presença</span>
+                    <strong className="text-lg font-bold text-white">Premium</strong>
+                  </div>
+                  <div className="hero-floating-card min-w-[140px] p-4 rounded-2xl border border-white/10 bg-black/60 backdrop-blur-md shadow-2xl">
+                    <span className="hero-floating-label block text-[10px] text-muted-foreground uppercase tracking-widest mb-1">Base</span>
+                    <strong className="text-lg font-bold text-white">Next.js</strong>
+                  </div>
+                </div>
+
+                <HeroArt />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section py-24 bg-muted/20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="section-intro text-xl md:text-2xl font-medium text-muted-foreground max-w-3xl mx-auto mb-16">
-            Estrutura institucional séria para presença digital, validação e credibilidade.
+        <div className="container mx-auto px-4">
+          <div className="section-intro text-xl md:text-2xl font-medium text-muted-foreground max-w-3xl mx-auto mb-16 text-center">
+            Estrutura institucional séria para presença digital, validação, branding e credibilidade.
           </div>
 
           <div className="stats-grid grid grid-cols-2 md:grid-cols-4 gap-8" role="list" aria-label="Destaques do projeto">
@@ -127,20 +145,20 @@ export default function HomePage() {
       <section className="section py-24 bg-card border-y border-border/50">
         <div className="container mx-auto px-4 text-grid grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="text-block">
-            <h2 className="text-3xl font-black mb-6">Marca completa para evoluir</h2>
+            <h2 className="text-3xl font-black mb-6">Marca preparada para múltiplos usos</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Agora a Bit4code passa a ter um símbolo próprio além do wordmark, o que facilita
-              aplicação em favicon, avatar, redes sociais, cabeçalhos, rodapés, materiais
-              comerciais e futuras interfaces de produto.
+              O sistema agora possui ícone, imagem social, manifest e marca vetorial
+              em código, permitindo aplicação consistente no navegador, redes sociais,
+              atalhos de dispositivo e futuras interfaces de produto.
             </p>
           </div>
 
           <div className="text-block">
-            <h2 className="text-3xl font-black mb-6">Base leve, rápida e preparada</h2>
+            <h2 className="text-3xl font-black mb-6">Leveza, velocidade e percepção premium</h2>
             <p className="text-muted-foreground leading-relaxed">
-              O projeto utiliza Next.js com TypeScript, páginas estáveis, SEO básico e
-              cabeçalhos de segurança aplicados na aplicação, favorecendo velocidade,
-              manutenção simples e publicação profissional no Firebase.
+              A combinação de Next.js, TypeScript, arte gerada em código, SEO básico,
+              metadados ricos e cabeçalhos de segurança cria uma presença mais robusta,
+              profissional e pronta para publicação no Firebase.
             </p>
           </div>
         </div>
