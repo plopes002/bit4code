@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HeroBackground from '@/components/HeroBackground';
 
 const services = [
   {
@@ -31,6 +32,8 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
+        <HeroBackground />
+        
         <div className="container mx-auto px-4 hero-grid">
           <div className="hero-content">
             <span className="eyebrow">Tecnologia com identidade, clareza e execução profissional</span>
