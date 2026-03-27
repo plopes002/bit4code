@@ -1,39 +1,79 @@
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
+export const metadata = {
+  title: 'Política de Privacidade',
+  description: 'Política de Privacidade da Bit4code.',
+};
 
 export default function PrivacyPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow pt-32 pb-24">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="text-4xl font-headline font-black mb-12">Privacy Policy</h1>
-          <div className="prose prose-invert max-w-none space-y-8">
-            <section>
-              <h2 className="text-2xl font-bold mb-4">1. Information Collection</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Bit4Code Institutional respects your privacy. We collect only the information necessary to provide our services and communicate with our clients. This includes contact details provided through our inquiry forms and analytical data to improve our digital experiences.
-              </p>
-            </section>
-            <section>
-              <h2 className="text-2xl font-bold mb-4">2. Data Usage</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Your data is used solely for service delivery, institutional communication, and internal analytics. We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties.
-              </p>
-            </section>
-            <section>
-              <h2 className="text-2xl font-bold mb-4">3. Security</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                We implement advanced security measures including encryption and secure headers (CSP, HSTS) to maintain the safety of your information across all Bit4Code digital properties.
-              </p>
-            </section>
-            <p className="text-sm text-muted-foreground italic pt-8 border-t">
-              Last Updated: May 2024
-            </p>
-          </div>
+    <div className="container mx-auto px-4 pb-20">
+      <section className="page-hero pt-20">
+        <span className="eyebrow">Privacidade</span>
+        <h1 className="mt-6">Política de Privacidade</h1>
+        <p className="mt-6">
+          Esta política descreve, de forma institucional e geral, como a Bit4code
+          trata informações relacionadas ao uso de seus ambientes digitais.
+        </p>
+      </section>
+
+      <section className="section py-12 legal-content space-y-8">
+        <div>
+          <h2>1. Identificação</h2>
+          <p className="mt-4">BIT 4 CODE LTDA</p>
+          <p>CNPJ: 36.989.661/0001-39</p>
+          <p>
+            E-mail: <a href="mailto:dev@bit4code.digital" className="text-primary hover:underline">dev@bit4code.digital</a>
+          </p>
         </div>
-      </main>
-      <Footer />
+
+        <div>
+          <h2>2. Serviços da empresa</h2>
+          <p className="mt-4">
+            A Bit4code atua com programação, automação, inteligência artificial, TI,
+            CyberSecurity, SaaS, produtos digitais e projetos correlatos, incluindo soluções como o ViraLink.
+          </p>
+        </div>
+
+        <div>
+          <h2>3. Informações que podem ser tratadas</h2>
+          <p className="mt-4">
+            Podemos tratar dados enviados voluntariamente em contatos institucionais e,
+            quando aplicável, dados técnicos mínimos necessários à segurança, estabilidade
+            e funcionamento dos ambientes digitais.
+          </p>
+        </div>
+
+        <div>
+          <h2>4. Finalidades</h2>
+          <p className="mt-4">
+            As informações podem ser utilizadas para responder contatos, manter segurança,
+            aprimorar serviços, operar ambientes digitais e atender obrigações legais quando cabíveis.
+          </p>
+        </div>
+
+        <div>
+          <h2>5. Compartilhamento</h2>
+          <p className="mt-4">
+            Não realizamos compartilhamento indiscriminado de dados. Quando necessário,
+            poderá haver uso de fornecedores de infraestrutura, hospedagem, suporte ou segurança.
+          </p>
+        </div>
+
+        <div>
+          <h2>6. Segurança</h2>
+          <p className="mt-4">
+            A Bit4code adota medidas técnicas e organizacionais compatíveis com seu contexto
+            operacional para proteção de seus ambientes digitais.
+          </p>
+        </div>
+
+        <div>
+          <h2>7. Atualizações</h2>
+          <p className="mt-4">
+            Esta política poderá ser atualizada a qualquer momento para refletir ajustes
+            legais, técnicos, operacionais ou institucionais.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }

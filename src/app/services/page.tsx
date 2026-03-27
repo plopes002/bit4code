@@ -1,64 +1,77 @@
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import { CheckCircle2 } from 'lucide-react';
-
-const serviceDetails = [
+const items = [
   {
-    title: "Software Engineering Excellence",
-    description: "We don't just write code; we engineer systems. Our approach prioritizes maintainability, scalability, and type-safety to ensure long-term stability.",
-    features: ["Domain-Driven Design", "Microservices Architecture", "Performance-first Code", "Test-driven Development"]
+    title: 'Desenvolvimento de software',
+    text: 'Criação de sites, sistemas web, plataformas administrativas, áreas de cliente, APIs e aplicações sob medida.',
   },
   {
-    title: "Institutional Digital Strategy",
-    description: "Aligning your technological roadmap with business objectives. We help institutional leaders make informed decisions on their tech stack evolution.",
-    features: ["Tech Auditing", "Cloud Roadmap Design", "AI Implementation Strategy", "Security Governance"]
-  }
+    title: 'Automação e integrações',
+    text: 'Conexão entre sistemas, automação de processos, fluxos de negócio e operações mais eficientes.',
+  },
+  {
+    title: 'Inteligência Artificial aplicada',
+    text: 'Uso de IA para atendimento, produtividade, organização de dados, conteúdo e apoio a decisões.',
+  },
+  {
+    title: 'TI e estrutura tecnológica',
+    text: 'Apoio técnico, desenho de arquitetura, evolução de ambientes digitais e organização operacional.',
+  },
+  {
+    title: 'CyberSecurity',
+    text: 'Boas práticas de proteção, reforço de segurança em ambientes públicos e visão preventiva sobre riscos digitais.',
+  },
+  {
+    title: 'SaaS e produtos próprios',
+    text: 'Desenvolvimento e operação de soluções digitais escaláveis, incluindo produtos como o ViraLink.',
+  },
 ];
+
+export const metadata = {
+  title: 'Serviços',
+  description: 'Conheça os serviços oferecidos pela Bit4code.',
+};
 
 export default function ServicesPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow pt-32 pb-24">
-        <div className="container mx-auto px-4">
-          <header className="max-w-3xl mb-20 space-y-6">
-            <h1 className="text-5xl md:text-6xl font-headline font-black">Our Capabilities</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Bit4Code provides elite software engineering and strategic digital solutions for institutions that demand reliability and performance.
-            </p>
-          </header>
+    <div className="container mx-auto px-4 pb-20">
+      <section className="page-hero pt-20">
+        <span className="eyebrow">Serviços</span>
+        <h1 className="mt-6">Áreas de atuação da Bit4code</h1>
+        <p className="mt-6 text-xl">
+          Atuamos com tecnologia aplicada a negócios, produtos digitais e estruturação
+          de operações com base profissional e moderna.
+        </p>
+      </section>
 
-          <div className="space-y-32">
-            {serviceDetails.map((s, i) => (
-              <div key={i} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div className={i % 2 !== 0 ? 'lg:order-last' : ''}>
-                  <div className="space-y-8">
-                    <h2 className="text-4xl font-headline font-bold">{s.title}</h2>
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      {s.description}
-                    </p>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {s.features.map((f, j) => (
-                        <li key={j} className="flex items-center space-x-3 text-foreground font-medium">
-                          <CheckCircle2 className="h-5 w-5 text-primary" />
-                          <span>{f}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="bg-muted rounded-3xl aspect-video relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:opacity-100 transition-opacity duration-500 opacity-50" />
-                  <div className="h-full w-full flex items-center justify-center">
-                     <span className="text-8xl opacity-10 font-black select-none">{s.title.split(' ')[0]}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section className="section py-16">
+        <div className="card-grid">
+          {items.map((item) => (
+            <article key={item.title} className="card">
+              <h3>{item.title}</h3>
+              <p className="mt-4">{item.text}</p>
+            </article>
+          ))}
         </div>
-      </main>
-      <Footer />
+      </section>
+
+      <section className="section py-16 border-t border-white/5">
+        <div className="two-columns">
+          <article className="content-block">
+            <h2>Visão técnica e de negócio</h2>
+            <p className="mt-4">
+              Não entregamos apenas interface. Estruturamos soluções com foco em
+              organização, manutenção, performance e aderência à operação da empresa.
+            </p>
+          </article>
+
+          <article className="content-block">
+            <h2>Projetos sob medida</h2>
+            <p className="mt-4">
+              Cada empresa possui necessidades específicas. Por isso, a Bit4code atua
+              tanto em projetos personalizados quanto em frentes de produto e SaaS.
+            </p>
+          </article>
+        </div>
+      </section>
     </div>
   );
 }

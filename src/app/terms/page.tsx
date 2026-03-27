@@ -1,39 +1,66 @@
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
+export const metadata = {
+  title: 'Termos de Uso',
+  description: 'Termos de Uso da Bit4code.',
+};
 
 export default function TermsPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow pt-32 pb-24">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="text-4xl font-headline font-black mb-12">Terms of Use</h1>
-          <div className="prose prose-invert max-w-none space-y-8">
-            <section>
-              <h2 className="text-2xl font-bold mb-4">1. Institutional Engagement</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                By accessing this website, you are agreeing to be bound by these Terms of Use, all applicable laws, and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
-              </p>
-            </section>
-            <section>
-              <h2 className="text-2xl font-bold mb-4">2. Intellectual Property</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                The materials contained in this website are protected by applicable copyright and trademark law. The "Bit4Code" brand and associated graphics are the exclusive property of Bit4Code Institutional.
-              </p>
-            </section>
-            <section>
-              <h2 className="text-2xl font-bold mb-4">3. Limitation of Liability</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                In no event shall Bit4Code or its suppliers be liable for any damages arising out of the use or inability to use the materials on Bit4Code's website.
-              </p>
-            </section>
-            <p className="text-sm text-muted-foreground italic pt-8 border-t">
-              Last Updated: May 2024
-            </p>
-          </div>
+    <div className="container mx-auto px-4 pb-20">
+      <section className="page-hero pt-20">
+        <span className="eyebrow">Termos</span>
+        <h1 className="mt-6">Termos de Uso</h1>
+        <p className="mt-6">
+          Estes Termos regulam o acesso e a utilização do site institucional da Bit4code.
+        </p>
+      </section>
+
+      <section className="section py-12 legal-content space-y-8">
+        <div>
+          <h2>1. Titularidade</h2>
+          <p className="mt-4">O site é mantido por BIT 4 CODE LTDA, CNPJ 36.989.661/0001-39.</p>
         </div>
-      </main>
-      <Footer />
+
+        <div>
+          <h2>2. Finalidade</h2>
+          <p className="mt-4">
+            Este ambiente possui caráter institucional e informativo, apresentando a empresa,
+            seus serviços, áreas de atuação e canais de contato.
+          </p>
+        </div>
+
+        <div>
+          <h2>3. Uso permitido</h2>
+          <p className="mt-4">
+            O usuário compromete-se a utilizar este site de forma lícita, ética e compatível
+            com sua finalidade, abstendo-se de práticas que comprometam segurança, estabilidade
+            ou integridade do ambiente.
+          </p>
+        </div>
+
+        <div>
+          <h2>4. Propriedade intelectual</h2>
+          <p className="mt-4">
+            Marca, identidade visual, textos, estrutura e demais conteúdos associados à Bit4code
+            pertencem à empresa ou são utilizados sob autorização.
+          </p>
+        </div>
+
+        <div>
+          <h2>5. Alterações</h2>
+          <p className="mt-4">
+            A Bit4code poderá atualizar, ajustar ou modificar conteúdos e elementos do site
+            a qualquer momento, conforme necessidade institucional ou técnica.
+          </p>
+        </div>
+
+        <div>
+          <h2>6. Contato</h2>
+          <p className="mt-4">
+            Em caso de dúvidas, entre em contato pelo e-mail{' '}
+            <a href="mailto:dev@bit4code.digital" className="text-primary hover:underline">dev@bit4code.digital</a>.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
