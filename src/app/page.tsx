@@ -84,8 +84,8 @@ export default function HomePage() {
                 <strong className="block mt-1">Performance</strong>
               </div>
               <div className="metric-card">
-                <small>Base</small>
-                <strong className="block mt-1">Next.js</strong>
+                <small>ESTRUTURA</small>
+                <strong className="block mt-1">Escalável</strong>
               </div>
               <div className="metric-card">
                 <small>Padrão</small>

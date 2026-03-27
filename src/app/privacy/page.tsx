@@ -73,6 +73,32 @@ export default function PrivacyPage() {
             legais, técnicos, operacionais ou institucionais.
           </p>
         </div>
+
+        <div>
+          <h2>8. Direitos do usuário</h2>
+            <p>
+            O titular dos dados pode, quando aplicável, solicitar informações sobre o tratamento
+            de seus dados, correção de dados incompletos ou desatualizados, bem como sua exclusão,
+            respeitadas as obrigações legais aplicáveis.
+            </p>
+        </div>
+
+        <div>
+            <h2>9. Uso de cookies e dados de navegação</h2>
+            <p>
+            Este site pode utilizar dados técnicos de navegação, como endereço IP, tipo de navegador
+            e informações de acesso, com a finalidade de garantir segurança, estabilidade e melhoria
+            da experiência do usuário.
+            </p>
+        </div>
+
+        <div>
+            <h2>10. Contato</h2>
+            <p>
+            Para solicitações relacionadas a dados ou dúvidas sobre esta política, entre em contato pelo e-mail
+            <a href="mailto:dev@bit4code.digital"> dev@bit4code.digital</a>.
+            </p>
+        </div>
       </section>
     </div>
   );
